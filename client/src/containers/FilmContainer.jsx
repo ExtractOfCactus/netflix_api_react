@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FilmSelector from '../components/FilmSelector.jsx'
+import FilmDetails from '../components/FilmDetails.jsx'
 
 class FilmContainer extends React.Component {
   constructor(props) {
@@ -34,6 +35,8 @@ class FilmContainer extends React.Component {
     return(
       <div>
         <h2> Film Container </h2>
+        <FilmSelector films={this.state.films} selectFilm={this.setChosenFilm}/>
+        <FilmDetails film={this.state.chosenFilm}/>
       </div>
     );
   }

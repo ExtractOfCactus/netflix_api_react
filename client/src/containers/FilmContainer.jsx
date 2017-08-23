@@ -18,7 +18,7 @@ class FilmContainer extends React.Component {
   }
 
   componentDidMount() {
-    const url = "http://netflixroulette.net/api/api.php?actor=Keanu%20Reeves";
+    const url = "https://netflixroulette.net/api/api.php?actor=Keanu%20Reeves";
     const request = new XMLHttpRequest();
     request.addEventListener('load', () => {
       if (request.status !== 200 ) return;
@@ -34,7 +34,7 @@ class FilmContainer extends React.Component {
   render() {
     return(
       <div>
-        <h2> Film Container </h2>
+        <h2> Keanu Reeves Films </h2>
         <FilmSelector films={this.state.films} selectFilm={this.setChosenFilm}/>
         <FilmDetails film={this.state.chosenFilm}/>
       </div>
